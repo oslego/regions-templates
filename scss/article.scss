@@ -1,0 +1,35 @@
+@import "_utils.scss";
+@import "../lib/normalize/normalize.css";
+
+article{
+    @include prefix-property('flow-into', article);
+    
+    p{
+        line-height: 1.4rem;
+    }
+    
+    p + p{
+        margin-top: 1.6rem;
+    }
+    
+    h1, h2, h3{
+        font-family: georgia;
+        letter-spacing: 0px;
+    }
+    
+    h1{
+        font-size: 3rem;
+        margin-top: 0;
+    }
+}
+aside{
+    @include prefix-property('flow-into', aside);
+}
+
+q{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 100;
+    font-style: italic;
+    color: gray;
+}

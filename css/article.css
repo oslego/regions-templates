@@ -1,0 +1,31 @@
+@import url(../lib/normalize/normalize.css);
+article {
+  -webkit-flow-into: article;
+  -moz-flow-into: article;
+  -ms-flow-into: article;
+  -o-flow-into: article;
+  flow-into: article; }
+  article p {
+    line-height: 1.4rem; }
+  article p + p {
+    margin-top: 1.6rem; }
+  article h1, article h2, article h3 {
+    font-family: georgia;
+    letter-spacing: 0px; }
+  article h1 {
+    font-size: 3rem;
+    margin-top: 0; }
+
+aside {
+  -webkit-flow-into: aside;
+  -moz-flow-into: aside;
+  -ms-flow-into: aside;
+  -o-flow-into: aside;
+  flow-into: aside; }
+
+q {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 100;
+  font-style: italic;
+  color: gray; }

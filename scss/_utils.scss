@@ -1,4 +1,4 @@
-@mixin prefixProperty($property, $value){
+@mixin prefix-property($property, $value){
     -webkit-#{$property}: $value;
     -moz-#{$property}: $value;
     -ms-#{$property}: $value;
@@ -6,7 +6,7 @@
     #{$property}: $value;
 }
 
-@mixin prefixValue($property, $value){
+@mixin prefix-value($property, $value){
     #{$property}: -webkit-#{$value};
     #{$property}: -moz-#{$value};
     #{$property}: -ms-#{$value};
@@ -14,28 +14,33 @@
     #{$property}: #{$value};
 }
 
+@mixin rem($property, $value){
+    #{$property}: #{$value}em;
+    #{$property}: #{$value}rem;
+}
+
 @mixin flexbox{
-/*    @include prefixValue(display, box);*/
+/*    @include prefix-value(display, box);*/
     /* Flex needs to be last, so that we use the new flex-box when it's available */
     /* FIXME: Disable the new flex box for now. It seems like stable versions of Chromium don't have the whole implementation yet. */
-     @include prefixValue(display, flex); 
+     @include prefix-value(display, flex); 
 }
 
 @mixin flex($value: 1){
-    @include prefixProperty(flex, $value);
-/*    @include prefixProperty(box-flex, $value);*/
+    @include prefix-property(flex, $value);
+/*    @include prefix-property(box-flex, $value);*/
 }
 
 @mixin hbox{
     @include flexbox;
-/*    @include prefixProperty(box-orient, horizontal);*/
-    @include prefixProperty(flex-direction, row);
+/*    @include prefix-property(box-orient, horizontal);*/
+    @include prefix-property(flex-direction, row);
 }
 
 @mixin vbox{
     @include flexbox;
-/*    @include prefixProperty(box-orient, vertical);*/
-    @include prefixProperty(flex-direction, column);
+/*    @include prefix-property(box-orient, vertical);*/
+    @include prefix-property(flex-direction, column);
 }
 
 @mixin user-select($value: auto){
