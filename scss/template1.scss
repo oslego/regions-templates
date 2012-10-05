@@ -1,2 +1,10 @@
 @import "_utils.scss";
+@import "../lib/normalize/normalize.css";
 
+#template1{
+    @include hbox;
+
+    .region{
+        @include prefixProperty('flow-from', article);
+    }
+}
