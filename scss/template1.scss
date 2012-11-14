@@ -9,7 +9,7 @@ html, body{
     @include vbox;
 }   
    
-.template-flexbox{
+.template1{
     @include hbox;
     @include prefix-property('flex', 1);
     @include prefix-property('justify-content', 'center');

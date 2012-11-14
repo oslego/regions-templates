@@ -18,7 +18,7 @@ html, body {
   -o-flex-direction: column;
   flex-direction: column; }
 
-.template1 {
+.template-flexbox {
   /*    @include prefix-value(display, box);*/
   /* Flex needs to be last, so that we use the new flex-box when it's available */
   /* FIXME: Disable the new flex box for now. It seems like stable versions of Chromium don't have the whole implementation yet. */
@@ -49,8 +49,8 @@ html, body {
   -o-align-items: "center";
   align-items: "center";
   background: papayawhip; }
-  .template1 .region:nth-child(1),
-  .template1 .region:nth-child(3) {
+  .template-flexbox .region:nth-child(1),
+  .template-flexbox .region:nth-child(3) {
     -webkit-flow-from: article;
     -moz-flow-from: article;
     -ms-flow-from: article;
@@ -65,13 +65,13 @@ html, body {
     min-width: 300px;
     background: white;
     padding: 2rem; }
-  .template1 .region:nth-child(1) {
+  .template-flexbox .region:nth-child(1) {
     border-right: 1px solid gray;
     padding-left: 4rem; }
-  .template1 .region:nth-child(3) {
+  .template-flexbox .region:nth-child(3) {
     border-left: 1px solid gray;
     padding-right: 4rem; }
-  .template1 .region:nth-child(2) {
+  .template-flexbox .region:nth-child(2) {
     -webkit-flow-from: aside;
     -moz-flow-from: aside;
     -ms-flow-from: aside;
@@ -82,7 +82,7 @@ html, body {
     padding: 0 2rem;
     margin-bottom: auto;
     margin-top: auto; }
-  .template1::after {
+  .template-flexbox::after {
     content: "Page " attr(data-page-nr);
     text-align: center;
     position: absolute;
