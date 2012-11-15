@@ -66,3 +66,14 @@
 @mixin box-shadow{
     box-shadow: 0 3px 15px 3px rgba(0,0,0,.4);
 }
+
+@mixin abscenter{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
